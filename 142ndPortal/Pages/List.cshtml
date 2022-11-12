@@ -1,0 +1,50 @@
+﻿@page
+@model _142ndPortal.Pages.ListModel
+@{
+}
+
+<style>
+    body {
+        background-color: #1434A4;
+    }
+</style>
+
+<div class="" py-2 mb-5">
+    <div class="container">
+        <h1>Attendees</h1>
+    </div>
+</div>
+
+@if (Model.RSVPs != null && Model.RSVPs.Any())
+{
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Callsign</td>
+                    <td>Date</td>
+                    <td>Confirm</td>
+                    
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var student in Model.RSVPs)
+                {
+                    <tr>
+                        <td>@student.Callsign</td>
+                        <td>@student.Date</td>
+                        <td>@student.Confirm</td>
+                       
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="container">
+        <p>No blog posts were found!</p>
+    </div>
+}

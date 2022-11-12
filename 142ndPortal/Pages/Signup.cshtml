@@ -1,0 +1,48 @@
+﻿@page
+@model _142ndPortal.Pages.SignupModel
+@{
+}
+<style>
+    body {
+        background-color: darkblue;
+    }
+</style>
+<div class="bg-secondary bg-opacity-10 py-2 mb-5 text-white">
+    <div class="container">
+        <h1> RSVP Here </h1>
+    </div>
+
+
+<div>
+    <div class="container">
+        <form method="post">
+
+            <div class="mb-3 text-white">
+                <label for="Callsign" class="form-label">Callsign</label>
+                <input type="text" class="form-control" id="Callsign" asp-for="AddRSVP.Callsign">           </div>           
+
+            <div class="mb-3">
+                <label for="Date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="Date" asp-for="AddRSVP.Date">
+            </div>
+
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="isVisible" asp-for="AddRSVP.Confirm">
+                <label class="form-check-label" for="isVisible">
+                    By checking this you agree to attending the operation
+                </label>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+
+    </form>
+
+            
+                
+
+      </div>
+    </div>
+</div>
